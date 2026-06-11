@@ -42,10 +42,7 @@ margin:auto;
 color:rgba(255,255,255,.9);
 }
 
-.schedule-section{
-    margin-top:-40px;
-    padding:0 30px 60px;
-}
+
 
 .section-header{
 text-align:center;
@@ -67,13 +64,7 @@ color:var(--green);
 margin-top:10px;
 }
 
-.widget-wrapper{
-background:white;
-padding:50px;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,.08);
-overflow:hidden;
-}
+
 
 #ribbon-schedule{
 width:100%;
@@ -132,10 +123,7 @@ margin-bottom:10px;
 
 /* MOMENCE FIXES */
 
-.widget-wrapper{
-    padding:0;
-    overflow:hidden;
-}
+
 
 #ribbon-schedule{
     margin-top:-40px;
