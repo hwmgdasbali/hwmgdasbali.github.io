@@ -237,39 +237,15 @@
       max-width: 520px;
     }
 
-    /* ─── MOMENCE WIDGET WRAPPER ─── */
+    /* ─── BOOKING WIDGET WRAPPER ─── */
     .widget-wrapper {
       background: var(--white);
       border: 1px solid rgba(46,74,56,0.1);
       border-radius: 2px;
-      box-shadow: 0 4px 32px rgba(30,36,32,0.06);
-
-      /* Isolated flexbox container */
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      width: 100%;
-      min-height: 400px;
-
-      /* Contain any overflow from the widget's internal positioning */
-      overflow: hidden;
-      position: relative;
-    }
-
-    .widget-inner {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      width: 100%;
       padding: 32px;
-      box-sizing: border-box;
-    }
-
-    /* Override Momence widget to fill container */
-    #ribbon-schedule {
-      font-family: 'Jost', sans-serif !important;
+      box-shadow: 0 4px 32px rgba(30,36,32,0.06);
+      min-height: 400px;
       width: 100%;
-      flex: 1;
     }
 
     /* ─── INFO CARDS ─── */
@@ -413,22 +389,15 @@
     <h2 class="section-title">Browse &amp; Book Classes</h2>
     <p class="section-sub">Select a class below to view details and reserve your place. Bookings close 30 minutes before class begins.</p>
 
-    <!-- MOMENCE WIDGET -->
+    <!-- ============================================================
+         PASTE YOUR MOMENCE SNIPPET HERE
+         Replace this comment with your booking engine code.
+         Drop it directly inside div.widget-wrapper below.
+         ============================================================ -->
     <div class="widget-wrapper">
-      <div class="widget-inner">
-        <div id="ribbon-schedule"></div>
-        <script
-          async
-          type="module"
-          host_id="280206"
-          teacher_ids="[]"
-          location_ids="[]"
-          tag_ids="[]"
-          default_filter="show-all"
-          locale="en"
-          src="https://momence.com/plugin/host-schedule/host-schedule.js"
-        ></script>
-      </div>
+
+      <!-- YOUR SNIPPET GOES HERE -->
+
     </div>
 
     <!-- INFO CARDS -->
