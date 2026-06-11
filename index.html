@@ -242,14 +242,34 @@
       background: var(--white);
       border: 1px solid rgba(46,74,56,0.1);
       border-radius: 2px;
-      padding: 32px;
       box-shadow: 0 4px 32px rgba(30,36,32,0.06);
+
+      /* Isolated flexbox container */
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
       min-height: 400px;
+
+      /* Contain any overflow from the widget's internal positioning */
+      overflow: hidden;
+      position: relative;
     }
 
-    /* Override Momence widget to blend better */
+    .widget-inner {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      width: 100%;
+      padding: 32px;
+      box-sizing: border-box;
+    }
+
+    /* Override Momence widget to fill container */
     #ribbon-schedule {
       font-family: 'Jost', sans-serif !important;
+      width: 100%;
+      flex: 1;
     }
 
     /* ─── INFO CARDS ─── */
@@ -395,18 +415,20 @@
 
     <!-- MOMENCE WIDGET -->
     <div class="widget-wrapper">
-      <div id="ribbon-schedule"></div>
-      <script
-        async
-        type="module"
-        host_id="280206"
-        teacher_ids="[]"
-        location_ids="[]"
-        tag_ids="[]"
-        default_filter="show-all"
-        locale="en"
-        src="https://momence.com/plugin/host-schedule/host-schedule.js"
-      ></script>
+      <div class="widget-inner">
+        <div id="ribbon-schedule"></div>
+        <script
+          async
+          type="module"
+          host_id="280206"
+          teacher_ids="[]"
+          location_ids="[]"
+          tag_ids="[]"
+          default_filter="show-all"
+          locale="en"
+          src="https://momence.com/plugin/host-schedule/host-schedule.js"
+        ></script>
+      </div>
     </div>
 
     <!-- INFO CARDS -->
